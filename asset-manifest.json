@@ -1,18 +1,18 @@
 {
   "files": {
-    "main.js": "/english_words/static/js/main.e74585c1.chunk.js",
-    "main.js.map": "/english_words/static/js/main.e74585c1.chunk.js.map",
-    "runtime-main.js": "/english_words/static/js/runtime-main.712e0369.js",
-    "runtime-main.js.map": "/english_words/static/js/runtime-main.712e0369.js.map",
-    "static/js/2.ba944df6.chunk.js": "/english_words/static/js/2.ba944df6.chunk.js",
-    "static/js/2.ba944df6.chunk.js.map": "/english_words/static/js/2.ba944df6.chunk.js.map",
-    "static/js/3.32ce4ced.chunk.js": "/english_words/static/js/3.32ce4ced.chunk.js",
-    "static/js/3.32ce4ced.chunk.js.map": "/english_words/static/js/3.32ce4ced.chunk.js.map",
-    "index.html": "/english_words/index.html",
-    "static/js/2.ba944df6.chunk.js.LICENSE.txt": "/english_words/static/js/2.ba944df6.chunk.js.LICENSE.txt"
+    "main.js": "/beast51/english_words.github.io/english_words/static/js/main.e74585c1.chunk.js",
+    "main.js.map": "/beast51/english_words.github.io/english_words/static/js/main.e74585c1.chunk.js.map",
+    "runtime-main.js": "/beast51/english_words.github.io/english_words/static/js/runtime-main.ac95f12e.js",
+    "runtime-main.js.map": "/beast51/english_words.github.io/english_words/static/js/runtime-main.ac95f12e.js.map",
+    "static/js/2.ba944df6.chunk.js": "/beast51/english_words.github.io/english_words/static/js/2.ba944df6.chunk.js",
+    "static/js/2.ba944df6.chunk.js.map": "/beast51/english_words.github.io/english_words/static/js/2.ba944df6.chunk.js.map",
+    "static/js/3.32ce4ced.chunk.js": "/beast51/english_words.github.io/english_words/static/js/3.32ce4ced.chunk.js",
+    "static/js/3.32ce4ced.chunk.js.map": "/beast51/english_words.github.io/english_words/static/js/3.32ce4ced.chunk.js.map",
+    "index.html": "/beast51/english_words.github.io/english_words/index.html",
+    "static/js/2.ba944df6.chunk.js.LICENSE.txt": "/beast51/english_words.github.io/english_words/static/js/2.ba944df6.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.712e0369.js",
+    "static/js/runtime-main.ac95f12e.js",
     "static/js/2.ba944df6.chunk.js",
     "static/js/main.e74585c1.chunk.js"
   ]
