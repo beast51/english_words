@@ -7,12 +7,6 @@ const useStyles = createUseStyles({
       margin: 0,
     },
   },
-  slider: {
-    overflow: "hidden",
-  },
-  cardLine: {
-    display: "flex",
-  },
   app: {
     padding: "16px",
   },
@@ -21,17 +15,20 @@ const useStyles = createUseStyles({
 const data: Array<{ [key: string]: string }> = [
   { Apple: "Яблоко" },
   { Grape: "Виноград" },
+  { Application: "Приложение" },
+  { Perhaps: "Возможно" },
+  { Competitor: "Конкурент" },
+  { Sweat: "Потеть" },
+  { Gulp: "Глоток" },
+  { Throw: "Бросать" },
 ];
 
 function App() {
   const classes = useStyles();
+
   return (
     <div className={classes.app}>
-      <div className={classes.slider}>
-        <div className={classes.cardLine}>
-          <Slider data={data} />
-        </div>
-      </div>
+      <Slider data={data} />
     </div>
   );
 }
