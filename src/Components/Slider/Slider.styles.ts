@@ -3,7 +3,7 @@ import { createUseStyles } from "react-jss";
 const useStyle = createUseStyles({
   card: {
     minWidth: "288px",
-    width: "calc(100vw)",
+    width: "100vw",
     height: "288px",
     backgroundColor: "lightcoral",
     display: "flex",

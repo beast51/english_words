@@ -26,14 +26,14 @@ const Slider: React.FC<Props> = ({ data }): JSX.Element => {
     }
   };
 
-  const handleBtnClick = (e: any, side: string) =>
-    side === "left" ? moveLeft : moveRight;
+  const handleBtnClick = (side: string) =>
+    side === "left" ? moveLeft() : moveRight();
 
   return (
     <div className={classes.slider}>
       <div
         className={classes.btnLeft}
-        onClick={(e) => handleBtnClick(e, "left")}
+        onClick={() => handleBtnClick("left")}
       ></div>
       <div
         className={classes.cardLine}
@@ -54,7 +54,7 @@ const Slider: React.FC<Props> = ({ data }): JSX.Element => {
       </div>
       <div
         className={classes.btnRight}
-        onClick={(e) => handleBtnClick(e, "right")}
+        onClick={() => handleBtnClick("right")}
       ></div>
     </div>
   );
