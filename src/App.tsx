@@ -12,23 +12,12 @@ const useStyles = createUseStyles({
   },
 });
 
-const data: Array<{ [key: string]: string }> = [
-  { Apple: "Яблоко" },
-  { Grape: "Виноград" },
-  { Application: "Приложение" },
-  { Perhaps: "Возможно" },
-  { Competitor: "Конкурент" },
-  { Sweat: "Потеть" },
-  { Gulp: "Глоток" },
-  { Throw: "Бросать" },
-];
-
 function App() {
   const classes = useStyles();
 
   return (
     <div className={classes.app}>
-      <Slider data={data} />
+      <Slider />
     </div>
   );
 }

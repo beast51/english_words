@@ -1,28 +1,37 @@
-import { useState } from "react";
+import { useActions } from "../../hooks/useActions";
+import { useTypedSelector } from "../../hooks/useTypedSelector";
 import useStyle from "./Slider.styles";
 
 type Props = any;
 
-const Slider: React.FC<Props> = ({ data }): JSX.Element => {
+const Slider: React.FC<Props> = (): JSX.Element => {
+  const { data, isEnglish, moveAside } = useTypedSelector(
+    (state) => state.slider
+  );
+  const { changeLanguage, moveSliderRight, moveSliderLeft } = useActions();
+  console.log(data);
   const classes = useStyle();
-  const [isEnglish, setIsEnglish] = useState(true);
-  const [moveAside, setMoveAside] = useState(0);
 
   let widthCardLine: string = `${data.length * 100}vw`;
 
   const handleClick = (): void => {
-    setIsEnglish(!isEnglish);
+    changeLanguage();
   };
 
   const moveLeft = (): void => {
+    console.log(moveAside);
     if (moveAside < 0) {
-      setMoveAside(moveAside + 100);
+      console.log("left");
+      moveSliderLeft();
     }
   };
 
   const moveRight = (): void => {
+    console.log(moveAside);
     if (moveAside > -data.length * 100 + 100) {
-      setMoveAside(moveAside - 100);
+      console.log("right", moveAside);
+      moveSliderRight();
+      console.log("right", moveAside);
     }
   };
 
