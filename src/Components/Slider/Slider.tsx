@@ -5,11 +5,10 @@ import useStyle from "./Slider.styles";
 type Props = any;
 
 const Slider: React.FC<Props> = (): JSX.Element => {
+  const { changeLanguage, moveSliderRight, moveSliderLeft } = useActions();
   const { data, isEnglish, moveAside } = useTypedSelector(
     (state) => state.slider
   );
-  const { changeLanguage, moveSliderRight, moveSliderLeft } = useActions();
-  console.log(data);
   const classes = useStyle();
 
   let widthCardLine: string = `${data.length * 100}vw`;
@@ -19,19 +18,14 @@ const Slider: React.FC<Props> = (): JSX.Element => {
   };
 
   const moveLeft = (): void => {
-    console.log(moveAside);
     if (moveAside < 0) {
-      console.log("left");
       moveSliderLeft();
     }
   };
 
   const moveRight = (): void => {
-    console.log(moveAside);
     if (moveAside > -data.length * 100 + 100) {
-      console.log("right", moveAside);
       moveSliderRight();
-      console.log("right", moveAside);
     }
   };
 

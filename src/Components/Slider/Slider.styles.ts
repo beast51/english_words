@@ -22,6 +22,8 @@ const useStyle = createUseStyles({
   },
   cardLine: {
     display: "flex",
+    transition: "transform",
+    transitionDuration: ".3s",
   },
   app: {
     padding: "16px",
