@@ -1,6 +1,7 @@
 import { useActions } from "../../hooks/useActions";
 import { useTypedSelector } from "../../hooks/useTypedSelector";
 import useStyle from "./Slider.styles";
+import { partOfSpeechType } from "../../types/slider";
 
 type Props = any;
 
@@ -10,6 +11,23 @@ const Slider: React.FC<Props> = (): JSX.Element => {
     (state) => state.slider
   );
   const classes = useStyle();
+
+  const backgroundColor = (partOfSpeech: string) => {
+    switch (partOfSpeech) {
+      case "verb":
+        return "#6E6702";
+      case "noun":
+        return "#F1DCC9";
+      case "adverb":
+        return "#9F4636";
+      case "pronoun":
+        return "#C05805";
+      case "numerals":
+        return "#CE5A57";
+      case "adverb":
+        return "#444C5C";
+    }
+  };
 
   let widthCardLine: string = `${data.length * 100}vw`;
 
@@ -45,11 +63,34 @@ const Slider: React.FC<Props> = (): JSX.Element => {
           transform: `translateX(${moveAside}vw)`,
         }}
       >
-        {data.map((word: {}, i: number) => {
+        {data.map((words: { [key: string]: string }, i: number) => {
+          console.log(words.en);
           return (
-            <div className={classes.card} key={i.toString()}>
-              <p className={classes.word} onClick={handleClick}>
-                {isEnglish ? Object.keys(word) : Object.values(word)}
+            <div
+              className={classes.card}
+              style={{ backgroundColor: backgroundColor(words.partOfSpeech) }}
+              key={i.toString()}
+            >
+              {words.img && (
+                <img
+                  onClick={handleClick}
+                  className={classes.image}
+                  src={words.img}
+                  alt={words.en}
+                />
+              )}
+              <p
+                className={classes.word}
+                style={{
+                  color:
+                    words.partOfSpeech === "verb" ||
+                    words.partOfSpeech === "adverb"
+                      ? "white"
+                      : "black",
+                }}
+                onClick={handleClick}
+              >
+                {isEnglish ? words.en : words.ru}
               </p>
             </div>
           );
