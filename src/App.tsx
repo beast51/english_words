@@ -1,5 +1,6 @@
 import { createUseStyles } from "react-jss";
 import Slider from "./Components/Slider/Slider";
+import LanguageSwitcher from "./Components/LanguageSwitcher/LanguageSwitcher";
 
 const useStyles = createUseStyles({
   "@global": {
@@ -18,6 +19,7 @@ function App() {
   return (
     <div className={classes.app}>
       <Slider />
+      <LanguageSwitcher />
     </div>
   );
 }

@@ -49,7 +49,7 @@ const useStyle = createUseStyles({
     top: "0",
     left: "0",
     "&:active": {
-      backgroundColor: "white",
+      backgroundImage: "linear-gradient(270deg, transparent 5%, #ffffff 200%)",
       opacity: "50%",
       transition: "background-color",
       transitionDuration: ".3s",
@@ -66,7 +66,7 @@ const useStyle = createUseStyles({
     top: "0",
     right: "0",
     "&:active": {
-      backgroundColor: "white",
+      backgroundImage: "linear-gradient(90deg, transparent 5%, #ffffff 200%)",
       opacity: "50%",
       transition: "background-color",
       transitionDuration: ".3s",

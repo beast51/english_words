@@ -1,7 +1,6 @@
 import { useActions } from "../../hooks/useActions";
 import { useTypedSelector } from "../../hooks/useTypedSelector";
 import useStyle from "./Slider.styles";
-import { partOfSpeechType } from "../../types/slider";
 
 type Props = any;
 
@@ -64,7 +63,6 @@ const Slider: React.FC<Props> = (): JSX.Element => {
         }}
       >
         {data.map((words: { [key: string]: string }, i: number) => {
-          console.log(words.en);
           return (
             <div
               className={classes.card}
